@@ -1,0 +1,162 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --p-color: #121212;
+    --s-color: #FED43A;
+    --t-color: #fff;
+    --p-font: 'Lora', serif;
+    --s-font: 'Ubuntu', sans-serif;
+}
+
+.prim-text{
+    color: var(--p-color);
+}
+
+.sec-text{
+    color: var(--s-color);
+}
+
+.tir-color, #header-logo, header .navbar-nav .nav-link{
+    color:var(--t-color);
+}
+
+.prim-bg{
+    background-color: var(--p-color);
+}
+
+.sec-bg{
+    background-color: var(--s-color);
+}
+
+body, .prim-font{
+    font-family: var(--p-font);
+}
+
+h1, h2, h3, h4, h5, h6, .sec-font{
+    font-family: var(--s-font);
+}
+
+#header-logo{
+    font-size:2em;
+    font-weight: 500;
+}
+
+header .nav-link{
+    font-size: 1em;
+    font-weight:400;
+    text-transform: capitalize;
+}
+
+.nav-link:focus, .nav-link:hover {
+	color: var(--s-color) !important;
+}
+
+
+.cta-btn {
+	background-color: var(--s-color);
+	margin: 0 10px 0 18px;
+	padding: 8px 24px !important;
+	
+	font-weight: 500;
+	border: 1px solid var(--s-color);
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.cta-btn .btn-text{
+    font-weight: 500;
+    color: var(--p-color);
+}
+
+.cta-btn::after {
+	content: "text";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--p-color);
+	left: -90px;
+	bottom: -10px;
+	rotate: 45deg;
+	transform: scaleX(1);
+    transition:1s cubic-bezier(.43,1.51,.9,-0.06);
+}
+
+.cta-btn:hover::after {
+	color: var(--s-color);
+	transform: scaleX(3) scaleY(8);
+}
+
+
+.btn-text{
+    transition-delay: 100ms;
+    transition:500ms;
+}
+
+.cta-btn:hover .btn-text{    
+    color: var(--s-color);
+}
+
+.nav-item .nav-link.active {
+	color: var(--s-color);
+}
+
+.btn-text{
+    position:relative;
+    z-index:5;
+}
+
+a{
+    transition:color 300ms;
+}
+
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .9rem;
+        padding-left: .9rem;
+    }
+}
+
+header .m-link{
+    position:relative;
+}
+
+header .m-link:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    transform-origin: center center;
+    transition:300ms ease-in-out;
+    top:50%;
+    width: 0%;
+    height:2px;
+    background-color:var(--s-color);
+    opacity:0;
+}
+
+header .m-link:hover:after{
+    top:85%;
+    opacity:1;
+    width:85%;
+}
+
+.m-link.active::after {
+	opacity: 1;
+	width: 8px;
+	left: -54px;
+	height: 8px;
+	top: 6px;
+}
+
+.m-link.active:hover:after{
+    width: 8px;
+	left: -54px;
+	height: 8px;
+	top: 6px;
+    background-color:#fff;
+    transition:300ms;
+}
