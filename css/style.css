@@ -10,6 +10,15 @@ html{
     --s-font: 'Ubuntu', sans-serif;
 }
 
+html{
+    user-select: none;
+}
+
+body{
+    color:var(--t-color);
+    overflow-x:hidden;
+}
+
 .prim-text{
     color: var(--p-color);
 }
@@ -19,7 +28,7 @@ html{
 }
 
 .tir-color, #header-logo, header .navbar-nav .nav-link{
-    color:var(--t-color);
+    color:var(--s-color);
 }
 
 .prim-bg{
@@ -32,6 +41,10 @@ html{
 
 body, .prim-font{
     font-family: var(--p-font);
+}
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.2;
 }
 
 h1, h2, h3, h4, h5, h6, .sec-font{
@@ -90,9 +103,11 @@ header .nav-link{
 }
 
 
-.btn-text{
+.cta-btn .btn-text{
     transition-delay: 100ms;
     transition:500ms;
+    position:relative;
+    z-index:5;
 }
 
 .cta-btn:hover .btn-text{    
@@ -103,20 +118,8 @@ header .nav-link{
 	color: var(--s-color);
 }
 
-.btn-text{
-    position:relative;
-    z-index:5;
-}
-
 a{
     transition:color 300ms;
-}
-
-@media (min-width:992px){
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: .9rem;
-        padding-left: .9rem;
-    }
 }
 
 header .m-link{
@@ -159,4 +162,76 @@ header .m-link:hover:after{
 	top: 6px;
     background-color:#fff;
     transition:300ms;
+}
+
+a{
+    color:var(--s-color);
+}
+
+
+h1 {
+	font-size: 52px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.prim-btn {
+	text-decoration: none;
+    display: inline-block;
+	background-color: var(--s-color);
+	color: var(--p-color);
+	padding: 12px 28px;
+	font-size: 16px;
+    font-weight: 500;
+	text-transform: uppercase;
+	font-family: var(--s-font);
+	letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+
+.prim-btn::after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 0px;
+	height: 0px;
+    
+	background-color: #fff;
+	border-radius: 100%;
+    
+    transition:600ms cubic-bezier(.18,1.4,.57,-0.39);
+}
+
+.prim-btn:hover::after{
+    opacity:1;
+    width: 220px;
+	height: 220px;
+}
+
+.prim-btn .btn-text{
+    position: relative;
+    z-index:5;
+}
+
+.prim-btn .btn-text{
+    color: var(--p-color);
+}
+
+section{
+    padding:70px 0;
+}
+
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .9rem;
+        padding-left: .9rem;
+    }
 }
