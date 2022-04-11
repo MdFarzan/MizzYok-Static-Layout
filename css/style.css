@@ -514,6 +514,40 @@ section{
 
 /* testimonial ends */
 
+.cta {
+	max-width: 980px;
+	margin: 0 auto;
+	background-color: var(--s-color);
+	color: var(--p-color);
+	padding: 35px 45px;
+	background-image: url('/img/shape-wirebox.png'), url('/img/shape-diamong.png');
+	
+}
+
+.cta h3{
+	margin:0;
+	font-weight: 500;
+}
+
+.cta p{
+	margin-bottom: 0;
+}
+
+.cta .sec-btn {
+	padding: 14px 32px;
+}
+
+.cta .sec-btn::after {
+	background-color: var(--p-color);
+}
+
+.cta .btn-text{
+	transition: color 1s;
+}
+
+.cta .sec-btn:hover .btn-text{
+	color:var(--t-color);
+}
 
 @media (min-width:992px){
     .navbar-expand-lg .navbar-nav .nav-link {
