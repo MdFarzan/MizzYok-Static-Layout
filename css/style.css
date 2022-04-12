@@ -521,6 +521,8 @@ section{
 	color: var(--p-color);
 	padding: 35px 45px;
 	background-image: url('/img/shape-wirebox.png'), url('/img/shape-diamong.png');
+	border:2px solid var(--p-color);
+	margin-top:-120px;
 	
 }
 
