@@ -71,6 +71,9 @@ header .nav-link{
 	color: var(--s-color) !important;
 }
 
+.navbar-toggler-icon img {
+	width: 100%;
+}
 
 .cta-btn {
 	background-color: var(--s-color);
@@ -549,6 +552,56 @@ section{
 
 .cta .sec-btn:hover .btn-text{
 	color:var(--t-color);
+}
+
+
+.navbar-toggler:focus{
+	box-shadow:none;	
+}
+
+
+
+@media (max-width:991px){
+	.hero #navbarNav {
+		margin-top: 20px;
+		border-top: 1px solid #fff;
+		padding: 21px 0px;
+	}
+
+	header .m-link::after {
+		margin: 0;
+		left: 0px !important;
+	}
+
+	header .m-link.active:after {
+		display: none;
+	}
+
+	.nav-link.active {
+		color: #fff !important;
+	}
+
+	header .nav-link {
+		padding: 10px 0px;
+	}
+
+	.cta-btn {
+		margin-top: 30px;
+		margin-left: 0px;
+		max-width: 200px;
+	}
+
+	
+	.cta-btn:hover::after {
+		color: var(--s-color);
+		transform: scaleX(3) scaleY(10);
+	}
+
+	.cta-btn::after {
+		left: -120px;
+		bottom: -10px;
+	}
+
 }
 
 @media (min-width:992px){
