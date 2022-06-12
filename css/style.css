@@ -368,7 +368,7 @@ section{
 }
 
 .statistics-wrap{
-	background-image: url('/img/city-bg.jpg');
+	background-image: url('https://github.com/MdFarzan/MizzYok-Static-Layout/blob/main/img/city-bg.jpg?raw=true');
 	background-size:cover;
 	background-attachment: fixed;	
 	position:relative;
