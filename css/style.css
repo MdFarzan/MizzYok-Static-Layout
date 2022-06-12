@@ -100,7 +100,7 @@ header .nav-link{
 	background-color: var(--p-color);
 	left: -90px;
 	bottom: -10px;
-	transform: scaleX(1) ;
+	transform: scaleX(1) rotate(45deg) ;
     transition:1s cubic-bezier(.43,1.51,.9,-0.06);
 }
 
